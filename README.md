@@ -1,2 +1,2 @@
 # ECG-Training
-ECG signal processing training using matlab
+Me learning ECG signal processing using matlab

@@ -1,0 +1,16 @@
+for j = 1100 %untuk data = 1100
+recordName=j;
+%CUsersAdminDocumentsMATLABEEGN
+
+EEGFileName=strcat( 'DMatlab16EEGZZ',num2str(recordName),'.txt');  %lokasi data diganti S,F,N,O
+S = textread(EEGFileName);
+% t=(0length(S)-1)fs;
+
+S=S-mean(S);
+S=Smax(abs(S));
+L=length(S);
+N=5; %level dekomposisi
+
+
+%diisi extraksi ciri
+

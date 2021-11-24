@@ -1,0 +1,9 @@
+function [CiriMEAN CiriENT CiriVAR CiriSKEW CiriKURT]=CiriOrdeSatu(Citra)
+H=imhist(Citra)';
+H=H/sum(H);
+I=[0:255];
+CiriMEAN = I*H';
+CiriENT = -H*log2(H+eps)';
+CiriVAR = (I-CiriMEAN).^2*H';
+CiriSKEW = (I-CiriMEAN).^3*H'/CiriVAR^1.5;
+CiriKURT = (I-CiriMEAN).^4*H'/CiriVAR^2-3;
